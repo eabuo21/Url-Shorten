@@ -15,7 +15,7 @@ const FlipCard = ({ frontTitle, backContent }) => {
       flipSpeedFrontToBack={2}
       flipSpeedBackToFront={2}
       flipOnHover={true}
-      containerStyle={{ width: "200px", height: "100px" }}
+
       wrapperStyle={{ border: "1px solid #ccc" }}
       frontStyle={{ backgroundColor: "#3498db" }}
       backStyle={{ backgroundColor: "#e74c3c" }}
@@ -23,26 +23,16 @@ const FlipCard = ({ frontTitle, backContent }) => {
       clickAction="click"
     >
       <div
-        data-aos="flip-up"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="1000"
-        data-aos-mirror="true"
-        data-aos-delay="50"
         onClick={handleCardFlip}
-        className="front-card  flex w-[200px] h-[100px] bg-blue-950 justify-center items-center  cursor-pointer rounded-md shadow-xl"
+        className="front-card  w-[45vh] h-[200px]  bg-blue-950 justify-center items-center flex cursor-pointer rounded-md shadow-current shadow-lg md:w-[40vh] "
       >
-        <h2>{frontTitle}</h2>
+        <h2 className="text-white shadow-sm shadow-current">{frontTitle}</h2>
       </div>
       <div
-        data-aos="flip-up"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="1000"
-        data-aos-mirror="true"
-        data-aos-delay="50"
         onClick={handleCardFlip}
-        className="back-card  flex w-[200px] h-[100px] bg-green-400 justify-center items-center  cursor-pointer rounded-md shadow-xl"
+        className="back-card  w-[45vh] h-[200px] bg-black justify-center items-center flex cursor-pointer rounded-md shadow-current shadow-lg  md:w-[40vh]"
       >
-        <p>{backContent}</p>
+        <p className="text-white text-center font-sans  text-base  ml-[1rem] mr-[1rem]  ">{backContent}</p>
       </div>
     </CardFlip>
   );

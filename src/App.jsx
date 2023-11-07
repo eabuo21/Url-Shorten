@@ -25,7 +25,7 @@ function App() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve();
-      }, 10000);
+      }, 2000);
     });
   };
 

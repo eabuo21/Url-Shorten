@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faGithub,
+  faSkype,
+} from "@fortawesome/free-brands-svg-icons";
 
-
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const ContactModal = ({ onClose }) => {
   return (
@@ -26,52 +30,81 @@ const ContactModal = ({ onClose }) => {
             <FontAwesomeIcon icon={faTimes} times-icon className="w-[50px] " />
           </button>
           <section className="contact-links-section  h-[fixed] p-6 relative top-5 flex flex-col">
-          <p> Connect </p>
-                      <Link to="#">
-                          <i class="fa-brands fa-github" className="text-red text-2xl"></i>
-                          Linkedin
-                      </Link>
+            <div className="flex flex-col justify-center items-center  pb-8">
+              <p className="text-center text-xl"> Connect </p>
+              <div className=" border border-gold w-20 rounded-xl relative top-4 "></div>
+            </div>
 
-                       <Link to="#">
-                          <i class="fa-brands fa-github" className="text-red text-2xl"></i>
-                          Github
-                      </Link>
+            <div className="flex flex-row gap-6 justify-center items-center pb-6">
+              <a
+                href="https://bit.ly/3Sv0aRT
+          "
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div className="bg-blue-950 rounded-full p-4 flex justify-center items-center text-white">
+                  <FontAwesomeIcon icon={faLinkedin} className=" text-2xl" />
+                </div>
+              </a>
 
-                       <Link to="#">
-                          <i class="fa-brands fa-github" className="text-red text-2xl"></i>
-                          Skype
-                      </Link>
-                  </section>
-                  
-                  <section className="form-section bg-violet-900 w-full h-[fixed] p-3 rounded-md shadow-current flex flex-col justify-center items-center">
-                      <p> Send a message</p>
-                      
-                      <form className="contact-form flex flex-col justify-self-center items-center gap-3 p-2">
-                          <input type="text"
-                              name="name"
-                              placeholder="your full Name"
-                          className="bg-zinc-50 "/>
+              <a
+                href="https://github.com/eabuo21
+          "
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div className="bg-blue-950 rounded-full p-4 flex justify-center items-center text-white">
+                  <FontAwesomeIcon icon={faGithub} className=" text-2xl" />
+                </div>
+              </a>
 
-                          <input type="email"
-                              name="email"
-                              placeholder="email address"
-                              className="bg-zinc-50 " />
-                          
-                          <input type="textarea"
-                              name="textarea"
-                              placeholder="type your message here"
-                          className="bg-zinc-50 h-32"/>
+              <a
+                href="https://join.skype.com/invite/OU5I1nkewm74
+          "
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div className="bg-blue-950 rounded-full p-4 flex justify-center items-center text-white">
+                  <FontAwesomeIcon icon={faSkype} className=" text-2xl" />
+                </div>
+              </a>
+            </div>
+          </section>
 
-                          <button type="submit"
-                              name="submit"
-                          className="bg-white w-full ml-7 mr-7 items-center transition-all duration-1000 ease-in-out hover:bg-gray-400 hover:text-white hover:transition-all hover:ease-in-out hover:duration-700">
-                              Send
-                              </button>
-                          
+          <section className="form-section  bg-blue-950  w-full h-[fixed] p-3 rounded-md shadow-current flex flex-col justify-center items-center">
+            <p> Send a message</p>
 
-                      </form>
-                  </section>
-                      
+            <form className="contact-form flex flex-col justify-self-center items-center gap-3 p-2">
+              <input
+                type="text"
+                name="name"
+                placeholder="your full Name"
+                className="bg-zinc-50 h-[40px] focus:outline-none rounded-md "
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="email address"
+                className="bg-zinc-50  h-[40px] focus:outline-none rounded-md"
+              />
+
+              <textarea
+                type="text"
+                id=""
+                placeholder="type your message here"
+                className="bg-zinc-50 h-20 w-full  focus:outline-none rounded-md"
+              />
+
+              <button
+                type="submit"
+                name="submit"
+                className="bg-white h-[40px]  rounded-md w-full ml-7 mr-7 items-center transition-all duration-1000 ease-in-out hover:bg-orange-950 hover:text-white hover:transition-all hover:ease-in-out hover:duration-700"
+              >
+                Send
+              </button>
+            </form>
+          </section>
         </div>
       </div>
     </>
